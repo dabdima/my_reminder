@@ -22,6 +22,7 @@
 
     <string name="help_activity_action_bar_title">Help</string>
     <string name="send_feedback">Надіслати відгук</string>
+    <string name="close_btn_desc">CloseBtn</string>
 
     <string name="update_app_informative_text">Доступна нова версія</string>
     <string name="update_app_button_text">Оновити</string>
