@@ -77,20 +77,18 @@
                 >
 
 
-
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nr_title_tiet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/nr_title_tiet"
-                    android:inputType="text"
-                    android:paddingTop="4dp"
-                    android:paddingLeft="12dp"
-                    android:paddingBottom="16dp"
-                    android:paddingRight="12dp"
-                    android:textAlignment="textStart"
                     android:layout_gravity="start"
-                    android:textSize="16sp"
-                    />
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="16dp"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp" />
 
 
 

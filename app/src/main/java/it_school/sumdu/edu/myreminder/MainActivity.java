@@ -38,6 +38,7 @@ import java.util.List;
 import static android.view.View.GONE;
 
 
+
 public class MainActivity extends AppCompatActivity implements ActionMode.Callback, ReminderInterface {
 
     private List<Reminder> reminderList = new ArrayList<>();
@@ -53,17 +54,17 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
     protected LinearLayout rAESLinearLayout;
     View rARootLayout;
 
-    private AdView rAAdView;
+    //private AdView rAAdView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reminders);
+        setContentView(R.layout.activity_main);
 
-        rAAdView = findViewById(R.id.ra_ad_view);
-        AdRequest pAAdRequest = new AdRequest.Builder().build();
-        rAAdView.loadAd(pAAdRequest);
+        //rAAdView = findViewById(R.id.ra_ad_view);
+        //AdRequest pAAdRequest = new AdRequest.Builder().build();
+        //rAAdView.loadAd(pAAdRequest);
 
         Float elevation = 0.0f;
         getSupportActionBar().setElevation(elevation);
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
 
                     if (rAActionMode == null) {
                         rAActionButton.hide();
-                        rAActionMode = startActionMode(RemindersActivity.this);
+                        rAActionMode = startActionMode(MainActivity.this);
                     }
                 }
 
@@ -129,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
 
     private void openNewReminderDialog(){
         FragmentManager oNRFSD = getSupportFragmentManager();
-        ReminderFSD newReminderFSD =  ReminderFSD.newInstance(0,"","","",0,0,false);
+        ReminderFsd newReminderFSD =  ReminderFsd.newInstance(0,"","","",0,0,false);
         FragmentTransaction transaction = oNRFSD.beginTransaction();
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         transaction.add(android.R.id.content, newReminderFSD).addToBackStack(null).commit();
@@ -211,7 +212,7 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
         long reminderTIM = selectedReminder.getReminderTIM();
 
         FragmentManager openERFSD = getSupportFragmentManager();
-        ReminderFSD editReminderFSD =  ReminderFSD.newInstance(reminderId,reminderTitle,reminderDOF,reminderTOF,reminderTIM,reminderPosition,true);
+        ReminderFsd editReminderFSD =  ReminderFsd.newInstance(reminderId,reminderTitle,reminderDOF,reminderTOF,reminderTIM,reminderPosition,true);
         FragmentTransaction oEditRFSDTransaction = openERFSD.beginTransaction();
         oEditRFSDTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         oEditRFSDTransaction.add(android.R.id.content, editReminderFSD).addToBackStack(null).commit();
@@ -546,14 +547,14 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
     protected void shareApp(){
         Intent sAIntent = new Intent();
         sAIntent.setAction(Intent.ACTION_SEND);
-        sAIntent.putExtra(Intent.EXTRA_TEXT,"Reminder App is a fast and simple app that I use to schedule tasks. Get it from: https://play.google.com/store/apps/details?id="+getPackageName());
+        sAIntent.putExtra(Intent.EXTRA_TEXT,"Some app description ... "+getPackageName());
         sAIntent.setType("text/plain");
         Intent.createChooser(sAIntent,"Share via");
         startActivity(sAIntent);
     }
 
     protected void openHelp(){
-        Intent remToHelpActivityIntent = new Intent(RemindersActivity.this,HelpActivity.class);
+        Intent remToHelpActivityIntent = new Intent(MainActivity.this,HelpActivity.class);
         startActivity(remToHelpActivityIntent);
     }
 

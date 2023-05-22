@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +58,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         protected TextView rTitleTextView;
         protected TextView rTOFTextView;
         protected TextView rDOFTextView;
-        protected FrameLayout reminderListRowFrameLayout;
+        protected RelativeLayout reminderListRowFrameLayout;
 
         public ReminderViewHolder(View view) {
             super(view);

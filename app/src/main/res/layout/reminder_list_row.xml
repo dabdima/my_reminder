@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -43,14 +43,14 @@
 
         <TextView
             android:id="@+id/reminder_dof_tvw"
-            android:layout_below="@id/reminder_title_tvw"
             android:layout_width="match_parent"
-            android:textSize="12sp"
-            android:text="14/11/2022, 07:45"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reminder_title_tvw"
             android:maxLines="1"
             android:paddingTop="8dp"
+            android:text="14/11/2022, 07:45"
             android:textColor="@color/mediumEmphasisTextColor"
-            android:layout_height="wrap_content" />
+            android:textSize="12sp" />
 
     </RelativeLayout>
 
