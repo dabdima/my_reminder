@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">MyReminder</string>
+    <string name="teit_error_text">Поле обов\'язкове</string>
+    <string name="del_reminder_dialog_negative_button">Відмінити</string>
+    <string name="ra_empty_state_title">Нагадувань немає</string>
+    <string name="ra_empty_state_text">Добавте нагадування і воно тут з\'явиться</string>
+    <string name="ra_copy_confirmation_text">МоїНагадування заготовок скопійовано copied</string>
+    <string name="delete_reminder_dialog_title">Видалити нагадування</string>
+    <string name="delete_reminder_dialog_message">Цю дію не можна відмінити</string>
+    <string name="delete_reminder_dialog_positive_button">Видалити</string>
+    <string name="copy">Копіювати</string>
+    <string name="edit">Редагувати</string>
+    <string name="delete">Видалити</string>
+    <string name="new_reminder">нове Нагадування</string>
+    <string name="reminder_set_c">Налаштувати нагадування</string>
+    <string name="channel_name">Reminder Notification</string>
+    <string name="channel_description">Reminders</string>
+    <string name="r_r_title">rRTitle</string>
+    <string name="notification_ctitle">Reminder</string>
+    <string name="title">Title</string>
+    <string name="content_reminders_image_description">Image description</string>
+
+    <string name="help_activity_action_bar_title">Help</string>
+    <string name="send_feedback">Надіслати відгук</string>
+
+    <string name="update_app_informative_text">Доступна нова версія</string>
+    <string name="update_app_button_text">Оновити</string>
+
 </resources>

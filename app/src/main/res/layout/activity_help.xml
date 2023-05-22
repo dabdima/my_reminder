@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    tools:context="it_school.sumdu.edu.myreminder.HelpActivity"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/help_activity_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="start"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:padding="16dp"
+        android:textColor="@android:color/black"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/send_feedback" />
+
+    <view
+        class="android.view.View"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+</LinearLayout>
