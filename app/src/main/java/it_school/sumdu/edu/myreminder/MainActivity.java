@@ -2,6 +2,7 @@ package it_school.sumdu.edu.myreminder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.shapes.Shape;
 import android.os.Bundle;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
@@ -26,6 +27,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
 
         remindersDatabaseAdapter = new ReminderDatabaseAdapter(this);
         remindersDatabaseAdapter.open();
+
+        initSearchWidgets();
 
         initializeReminderList();
 
@@ -122,6 +126,29 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
             @Override
             public void onClick(View view) {
                 openNewReminderDialog();
+            }
+        });
+    }
+
+    private void initSearchWidgets() {
+        SearchView searchView = (SearchView) findViewById(R.id.shapeListSearchView);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                List<Reminder> filteredReminders = new ArrayList<Reminder>();
+                for (Reminder item: reminderList) {
+                    if (item.getReminderTitle().toLowerCase().contains(s.toLowerCase())) {
+                        filteredReminders.add(item);
+                    }
+                }
+                ReminderAdapter adapter = new ReminderAdapter(getApplicationContext(), filteredReminders);
+                reminderRecyclerView.setAdapter(adapter);
+                return false;
             }
         });
     }

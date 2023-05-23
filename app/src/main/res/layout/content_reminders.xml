@@ -11,6 +11,13 @@
     android:background="#FFFFFF">
 <!--    tools:showIn="@layout/activity_main"-->
 
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shapeListSearchView"
+        android:iconifiedByDefault="false"
+        android:queryHint="Пошук"></SearchView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reminders_recycler_view"
         android:layout_width="match_parent"
