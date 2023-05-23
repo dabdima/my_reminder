@@ -17,7 +17,7 @@
     <string name="channel_description">Reminders</string>
     <string name="r_r_title">rRTitle</string>
     <string name="notification_ctitle">Reminder</string>
-    <string name="title">Title</string>
+    <string name="title">Тема</string>
     <string name="content_reminders_image_description">Image description</string>
 
     <string name="help_activity_action_bar_title">Help</string>
