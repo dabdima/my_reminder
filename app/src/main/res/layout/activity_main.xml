@@ -19,5 +19,4 @@
         android:contentDescription="@string/new_reminder"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/fab_add_icon" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

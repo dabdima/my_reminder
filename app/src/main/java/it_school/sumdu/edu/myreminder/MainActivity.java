@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements ActionMode.Callba
     }
 
     private void initSearchWidgets() {
-        SearchView searchView = (SearchView) findViewById(R.id.shapeListSearchView);
+        SearchView searchView = (SearchView) findViewById(R.id.reminderListSearchView);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {

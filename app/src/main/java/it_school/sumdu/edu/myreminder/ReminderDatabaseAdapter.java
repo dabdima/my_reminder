@@ -58,7 +58,6 @@ public class ReminderDatabaseAdapter {
 
         remindersDatabase.update(TABLE_REMINDER, reminderValues,
                 COL_REMINDER_ID + "=?", new String[]{String.valueOf(reminderId)});
-
     }
 
     protected void deleteReminder(int reminderId) {

@@ -1,5 +1,4 @@
 package it_school.sumdu.edu.myreminder;
-
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.view.GestureDetector;

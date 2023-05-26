@@ -7,10 +7,8 @@
         android:title="Справка"
         android:contentDescription="Help"
         app:showAsAction="never" />
-
     <item android:id="@+id/rem_activity_sa"
         android:title="Поділитися"
         android:contentDescription="Share App"
         app:showAsAction="never" />
-
 </menu>

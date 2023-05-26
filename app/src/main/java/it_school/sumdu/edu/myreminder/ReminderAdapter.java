@@ -45,7 +45,6 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.Remind
         else {
             holder.reminderListRowFrameLayout.setForeground(new ColorDrawable(ContextCompat.getColor(reminderAdapterContext,android.R.color.transparent)));
         }
-
     }
 
     @Override

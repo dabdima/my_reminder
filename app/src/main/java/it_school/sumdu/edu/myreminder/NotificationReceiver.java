@@ -60,6 +60,7 @@ public class NotificationReceiver extends BroadcastReceiver {
     public void setNextReminderAlarm(Context context){
 
         remindersDatabaseAdapter = new ReminderDatabaseAdapter(context);
+
         remindersDatabaseAdapter.open();
 
         Runnable initializeReminderListRunnable = new Runnable() {

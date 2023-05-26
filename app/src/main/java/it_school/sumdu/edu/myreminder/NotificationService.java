@@ -1,5 +1,4 @@
 package it_school.sumdu.edu.myreminder;
-
 import androidx.core.app.JobIntentService;
 import android.app.Notification;
 import android.app.NotificationChannel;
